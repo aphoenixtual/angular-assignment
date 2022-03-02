@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-4 col-md-offset-1">
+
+            <div class="form-box">
+                <h1 class="text-center font-color">Form</h1>
+                <form action="">
+                    <div class="form-group">
+                        <label for="firstName">Firstname</label>
+                        <input [(ngModel)]="userData.firstName" class="form-control" id="firstName" type="text"
+                            name="firstName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Lastname</label>
+                        <input [(ngModel)]="userData.lastName" class="form-control" id="lastName" type="text"
+                            name="lastName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">DOB</label>
+                        <input [(ngModel)]="userData.dob" class="form-control" id="dob" type="date" name="dob">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input [(ngModel)]="userData.email" class="form-control" id="email" type="email" name="Email">
+                    </div>
+                    <button *ngIf="!condition" (click)="submitButtonClicked()" class="btn btn-primary submit-button"
+                        type="submit">Submit</button>
+                    <button *ngIf="condition" (click)="submitButtonClicked(); resetButtonClicked()" class="btn btn-primary submit-button"
+                        type="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+
+
+        <div *ngIf="condition" class="col-md-4">
+            <h1 class="text-center font-color">OUTPUT</h1>
+            <div class="output">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/219/219983.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{userData.firstName}} {{userData.lastName}} </h5>
+                        <h6>DOB: {{userData.dob | date}}</h6>
+                        <h6>Email: {{userData.email}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

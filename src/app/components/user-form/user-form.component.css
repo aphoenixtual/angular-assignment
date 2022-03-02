@@ -1,0 +1,46 @@
+
+.container {
+    margin-top: 20px;
+}
+
+.form-control {
+    background-color: var(#00008B);
+    border: solid var(#00008B) 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0%;
+}
+
+.submit-button {
+    margin-top: 10px;
+    background-color: var(#00008B);
+    border: none;
+}
+
+.font-color {
+    color: var(#00008B);
+}
+
+.output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    color: var(--base-color-level-two);
+    font-weight: 500;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+}
